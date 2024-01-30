@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;/* Usar vh indica que independente de qual tela esteja sendo visualizada o conteudo, ele ocuparar toda a altura da tela.*/
+    
+}
+
+
+.header{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+}
+
+.header img{
+    height: 60px;
+}
+
+
+
+.header a{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header a:hover{
+    color: #C51111;
+    font-size: 25px;
+    transition: 0.5s ease-in-out;
+}
+
+.logo-superMario {
+    height: 200px;
+}
+
+
+
+.caixa-mae{
+    display: flex;
+    align-items: center; /*alinha os itens na vertical eixo y*/
+    justify-content: space-around; /*alinha os itens na horizontal eixo x*/
+    padding: 50px 100px 100px 100px;/*dar um espaço interno o margin da espaço externo.*/
+    height: 100vh;
+    
+    
+}
+
+.caixa-principal{
+    width: 40%;
+    /* text-align: justify; */
+}
+
+
+
+p {
+    padding: 2px 0px;
+    margin: 2px;
+    color: white;
+    font-size: 23px;
+}
+
+p.tex-pequeno{
+    padding: 2px 0px;
+    margin: 2px;
+    color: white;
+    font-size: 23px;
+    display: none;
+}
+
+button{
+    color: white;
+    background-color: #C51111;/* muda a cor do fundo.*/
+    border: none; /*o estilo já vem por padrão, usamos o none para tirar esse estilo.*/
+    border-radius: 3px; /* define o raio dos cantos do elemento.*/
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase; /*Deixa a letra do texto maiúsculo.*/
+    margin-top: 30px;
+}
+
+button:hover{
+    color: #EBE2E0;
+    background: #00A327;
+    transition: 0.5s ease-in-out;
+}
+
+.mario-luigi{
+    height: 400px;
+}
+
+
+.video-mario{
+    position: fixed; /*o item vai ficar fixo na tela*/
+    top: 0; /*quando usamos o position, precisamos informar onde posicionar, nesse caso quero ele no topo, mais poderia ser top todo a direita, bottom a direita, por padrão todos os itens começa top left.*/
+    z-index: -1;/* aqui o item vai ficar atras dos demais conteudos*/
+    
+}
+
+video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    object-fit: cover;
+
+
+    /*width: 100vw;  Usar vw indica que independente de qual tela esteja sendo visualizada o conteudo, ele ocuparar toda a largura da tela.*/
+  
+    
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    z-index: -1;   
+    
+}
+
+ .mascara-formulario{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    transition: visibility 1s ease-in-out;
+} 
+
+.link-whatsapp img{
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+   
+}
+
+
+.formulario-fale-conosco{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 20%;
+    left: -300px;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+    transition: left 1s ease-in-out;
+    
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18D80F;
+}
+
+textarea{
+    width: 270px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18D80F; 
+}
+
+/* Max-Width quando a tela for menor que o valor de Pixel determinado ela ficara menor com layout adaptado.
+    Min-width quando a tela for maior que o valor de Pixel determinado ela ficara maior com layout adaptado.
+
+*/
+
+@media(max-width:1150px){ 
+    
+    .header img{
+        /* height: 50px; */
+        display: none;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;       
+    }
+
+    .header a{
+        font-size: 20px;
+        
+    }
+
+    p{
+        display: none;
+    }
+
+    .tex-pequeno{
+        width: 70vw;
+        height: auto;
+        display: block;
+        font-size: 24px;
+        margin-top: 80px;
+        text-align: justify;
+        line-height: 40px;
+    }
+
+    .button-paragrafo{
+        margin: 60px;
+    }
+
+    .caixa-mae{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .caixa-principal{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 40px;
+
+    }
+
+
+    .mario-luigi{
+        width: 55vw;
+        height: auto;
+        padding-top: 80px;
+    }
+
+    .logo-superMario{
+        width: 30vw;
+        height: auto;
+        position: fixed;
+        top: 5%;
+        left: 10px;
+        padding: 20px;
+
+    }
+
+}
