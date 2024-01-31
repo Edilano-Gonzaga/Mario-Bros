@@ -8,7 +8,7 @@
 }
 
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 100vh;/* Usar vh indica que independente de qual tela esteja sendo visualizada o conteudo, ele ocuparar toda a altura da tela.*/
     
 }
