@@ -57,7 +57,8 @@ body {
 
 .caixa-principal{
     width: 40%;
-    /* text-align: justify; */
+    height: auto;
+    text-align: justify;
 }
 
 
@@ -210,18 +211,18 @@ textarea{
         display: none;
     }
 
-    .tex-pequeno{
+    p.tex-pequeno{
         width: 70vw;
         height: auto;
         display: block;
-        font-size: 24px;
-        margin-top: 80px;
+        font-size: 22px;
+        margin-top: 25px;
         text-align: justify;
-        line-height: 40px;
+        line-height: 25px;
     }
 
     .button-paragrafo{
-        margin: 60px;
+        margin: 40px;
     }
 
     .caixa-mae{
@@ -240,9 +241,10 @@ textarea{
 
 
     .mario-luigi{
-        width: 55vw;
-        height: auto;
-        padding-top: 80px;
+        width: 45vw;
+        height: 40vh;
+        padding-top: 10px;
+        box-sizing: border-box;
     }
 
     .logo-superMario{
@@ -253,6 +255,10 @@ textarea{
         left: 10px;
         padding: 20px;
 
+    }
+
+    .link-whatsapp img{
+        bottom: 100px;
     }
 
 }
