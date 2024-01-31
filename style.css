@@ -7,8 +7,9 @@
     text-decoration: none;
 }
 
-body {
-    /* overflow: hidden; */
+body, html {
+    overflow: hidden;
+    width:100vw;
     height: 100vh;/* Usar vh indica que independente de qual tela esteja sendo visualizada o conteudo, ele ocuparar toda a altura da tela.*/
     
 }
@@ -188,7 +189,7 @@ textarea{
 
 */
 
-@media(max-width:1150px){ 
+@media(max-width:1100px){ 
     
     .header img{
         /* height: 50px; */
@@ -203,7 +204,7 @@ textarea{
     }
 
     .header a{
-        font-size: 20px;
+        font-size: 18px;
         
     }
 
@@ -245,6 +246,7 @@ textarea{
         height: 40vh;
         padding-top: 10px;
         box-sizing: border-box;
+        
     }
 
     .logo-superMario{
@@ -254,6 +256,7 @@ textarea{
 
     .link-whatsapp img{
         bottom: 100px;
+        
     }
 
 }
